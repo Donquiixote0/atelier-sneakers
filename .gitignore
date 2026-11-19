@@ -1,0 +1,63 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Original downloaded models
+/assets-source/
+
+# Blender working files and derived backups
+/blender/work/
+/blender/exports/
+*.blend
+*.blend[0-9]*
+*.blend@
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.tmp/
+tmp/
+temp/
+
+# Caches and local reports
+.cache/
+.vite/
+.vercel/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+
+# Version only the three active models with verified licenses (LICENSES.md).
+*.glb
+/public/models/*
+!/public/models/atelier_af1_gold_hero_lossless_v002.glb
+!/public/models/atelier_sneaker_graffiti_lossless_v002.glb
+!/public/models/atelier_carapace_01_lossless_v002.glb
