@@ -201,7 +201,7 @@ Los siguientes valores se calcularon antes y después del traslado y resultaron 
 - 19-11-2026: extraídos en modo lectura autor, título, URL, UID y licencia de los tres originales. La consulta HTTPS directa a la API oficial de Sketchfab confirmó CC BY 4.0 en los tres UID, aunque la herramienta web no pudo abrir las páginas HTML. `LICENSES.md` registra los datos, SHA-256, enlaces de evidencia y diferencias de perfiles actuales.
 - La descripción de CARAPACE solicita acreditar a `Atahan DANACI` y no presentar la obra como propia. La licencia está verificada; queda pendiente alinear el crédito visible actual `6 / Atahan.Danaci` con ese nombre. Los créditos existentes incluyen autor, obra, licencia e indicación de cambios. No se alteraron modelos, interfaz, exclusiones de Git ni el índice.
 
-## Estado actual: atribuciones finalizadas y primer commit preparado
+## Atribuciones finalizadas y primer commit
 
 - Reutilizado `ShowroomFooter` y su desplegable nativo, ahora «Créditos 3D», cerrado inicialmente y con las tres atribuciones disponibles sin cambiar de modelo. Los datos permanecen centralizados en `src/data/showcaseProduct.ts`: Riaan Fitzgerald, McLogics y Atahan DANACI (perfil de Sketchfab: 6).
 - Integrados los enlaces indicados por el usuario: `https://skfb.ly/pNW7X`, la URL original de Sneaker y `https://skfb.ly/pP7Gp`; licencia CC BY 4.0 enlazada para cada obra. Sin parámetros de seguimiento. `LICENSES.md` actualizado sin repetir la investigación ya completada.
@@ -211,7 +211,20 @@ Los siguientes valores se calcularon antes y después del traslado y resultaron 
 - Validación previa al commit: `npm run build` y `npm run lint` correctos. Comprobados en la versión compilada los tres créditos, seis enlaces exactos, apertura/cierre por teclado, foco, acceso al contenido y ausencia de desbordamiento horizontal. Revisión visual a 1440×900 y 390×844; sin errores de ejecución. Se conserva la advertencia conocida del chunk 3D mayor de 500 kB. Evidencias locales en `.tmp/credits-*.png`, excluidas de Git.
 - Primer commit local autorizado con mensaje `feat: initial atelier sneakers showroom`: fuentes, configuración, lockfile, documentación, skills, pruebas y únicamente los tres GLB activos. Este registro se actualiza antes del commit. Sin dependencias nuevas, remoto ni push.
 
+## Estado actual: presentación para GitHub y futura publicación estática
+
+- Primer commit confirmado: `58aed2850bf6203e07fad97ad7ce47786453d481`, rama `main`. La preparación se validó inicialmente sin incorporarla al índice; posteriormente se autorizó guardarla en el segundo commit local.
+- Sustituido el README de Vite por la presentación de ATELIER SNEAKERS: experiencia, stack real, instalación con `npm ci` para clones nuevos, comandos, estructura, atribuciones enlazadas a `LICENSES.md`, límites de las pruebas históricas y preparación de Vercel. No se reinstalaron dependencias ni se repitió la investigación de licencias.
+- `index.html`: título y descripción representan Air Force 1, Sneaker Graffiti y CARAPACE 01. Añadidos metadatos Open Graph y Twitter Card con nombre, descripción y tipo reales. No se inventaron dominio, usuario social ni URL de demostración.
+- Creada `public/images/atelier-sneakers-social.png`: captura real de 1200×630 px, 157.028 bytes, tomada del showroom existente a 1600×840 píxeles CSS y escala 0,75. Imagen revisada visualmente, sin modelos ficticios, edición del diseño ni cambios de GLB. El README incluye la captura y atribuye el modelo de Riaan Fitzgerald bajo CC BY 4.0.
+- Pendiente de un dominio HTTPS real: completar canonical, `og:url`, `og:image` y `twitter:image` con URL absolutas, dimensiones y textos alternativos, según README. El archivo social ya existe y se sirve correctamente; la tarjeta con imagen aún no está conectada. No se publican valores provisionales o localhost en metadatos.
+- Favicon activo conservado y comprobado en navegador: SVG incrustado con la «A» beige, decodificado correctamente. Los seis enlaces de atribución de la página carecen de parámetros de seguimiento. Los SVG heredados de `public/` siguen intactos y no son el favicon activo.
+- `npm run build` y `npm run lint` correctos. Validado el HTML compilado, título y descripciones, imagen PNG por HTTP con respuesta 200 y dimensiones exactas, carga de Air Force 1, ausencia de errores de ejecución y desbordamiento horizontal en escritorio y móvil emulado. Los chunks JS y CSS no cambiaron; persiste el aviso conocido del chunk 3D mayor de 500 kB.
+- Compatibilidad estática revisada con la documentación oficial de Vercel: preset Vite, raíz del repositorio, `npm ci`, `npm run build`, salida `dist/` y Node 24.x como el entorno validado. Sin servidor, variables obligatorias ni rutas que requieran reescrituras. Validación local, no despliegue real. Sin remoto, push ni cambios de diseño funcional, modelos o Blender.
+
+- Segundo commit local autorizado: `docs: prepare atelier sneakers portfolio presentation`. Revisados únicamente `README.md`, `index.html`, este registro y `public/images/atelier-sneakers-social.png`. Se conservan las validaciones de build y ESLint de la etapa anterior: no cambiaron código, configuración ni recursos desde esas pruebas. Referencia local a la imagen correcta; URL públicas pendientes sin direcciones ficticias. Sin publicación, remoto ni push.
+
 ## Próxima etapa
 
-Preparar una futura publicación en Vercel solo cuando se solicite. Mantener las atribuciones y los tres GLB activos. Quedan como mejoras separadas la revisión en dispositivos físicos y la decisión sobre los recursos heredados sin uso; no ampliar esta etapa ni ejecutar push.
+Cuando se defina el dominio de publicación, completar los metadatos con URL absolutas y comprobar la tarjeta social desde el sitio público. No crear remoto ni desplegar sin una nueva instrucción. Mantener las atribuciones; quedan las pruebas en dispositivos físicos y la decisión sobre recursos heredados sin uso.
 
