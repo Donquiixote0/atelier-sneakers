@@ -2,6 +2,8 @@
 
 Showroom 3D interactivo de zapatillas con una dirección visual editorial: fondo beige, iluminación de estudio y espacio para explorar cada pieza. Proyecto de portafolio inspirado en Sneaker Archive, desarrollado con React y Three.js.
 
+**Proyecto público:** [atelier-sneakers.vercel.app](https://atelier-sneakers.vercel.app/).
+
 ![Captura real de ATELIER SNEAKERS con Air Force 1 y el catálogo de tres zapatillas](public/images/atelier-sneakers-social.png)
 
 La captura muestra el modelo de [Riaan Fitzgerald](https://skfb.ly/pNW7X), bajo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), adaptado según [LICENSES.md](LICENSES.md). Es una captura real del showroom, sin imágenes generadas.
@@ -87,9 +89,9 @@ Los tres modelos tienen licencia [CC BY 4.0](https://creativecommons.org/license
 
 Adaptaciones: escala, orientación y centrado; emisión de Air Force 1 reducida de 1 a 0; compresión Meshopt y conversión selectiva de texturas a WebP sin pérdida. Se conservaron geometría, UV y resoluciones. Las licencias de modelos se documentan por separado de las dependencias y del código del showroom.
 
-## Preparación para Vercel
+## Despliegue en Vercel
 
-La aplicación produce archivos estáticos y no necesita funciones de servidor. Configuración prevista:
+La aplicación produce archivos estáticos y no necesita funciones de servidor. Configuración del proyecto:
 
 | Ajuste | Valor |
 | --- | --- |
@@ -102,7 +104,7 @@ La aplicación produce archivos estáticos y no necesita funciones de servidor. 
 
 La navegación usa anclas de la misma página; no necesita reescrituras para rutas de aplicación. Los GLB y la captura se copian desde `public/` a la entrega. No se requiere un `vercel.json` para esta configuración. Referencia: [Vite en Vercel](https://vercel.com/docs/frameworks/frontend/vite).
 
-La compilación y la vista previa estática están comprobadas localmente. Todavía no hay despliegue público ni dominio asignado; no se incluyen enlaces de demostración ficticios.
+Proyecto publicado en [ATELIER SNEAKERS](https://atelier-sneakers.vercel.app/), con GitHub conectado y `main` como rama de producción. Air Force 1, Sneaker Graffiti y CARAPACE 01 funcionan en el despliegue público.
 
 ## Metadatos y vista previa social
 
@@ -110,8 +112,8 @@ La compilación y la vista previa estática están comprobadas localmente. Todav
 
 `public/images/atelier-sneakers-social.png` es una captura real de **1200 × 630 px**, tomada de la interfaz a 1600 × 840 píxeles CSS y escala 0,75, sin cambiar diseño ni modelos. Puede usarse como imagen de presentación del repositorio conservando la atribución.
 
-**Pendiente cuando exista el dominio público:** añadir a `index.html` el enlace canónico y `og:url`, y conectar `og:image` y `twitter:image` con la URL HTTPS absoluta de `/images/atelier-sneakers-social.png`. Añadir `og:image:width=1200`, `og:image:height=630`, `og:image:type=image/png` y textos alternativos. Se omiten esas URL para no publicar direcciones inventadas o `localhost`; la tarjeta con imagen aún requiere ese paso. Verificar después el acceso público al PNG y la previsualización social.
+El enlace canónico y `og:url` apuntan a `https://atelier-sneakers.vercel.app/`. Open Graph y Twitter Card comparten la [imagen social pública](https://atelier-sneakers.vercel.app/images/atelier-sneakers-social.png), con dimensiones, tipo PNG y textos alternativos declarados en `index.html`. El título y las descripciones representan el catálogo de las tres zapatillas.
 
 ## Estado y límites conocidos
 
-Build y ESLint validados. El chunk 3D mantiene el aviso de tamaño de Vite; el JavaScript inicial está separado y los modelos se cargan bajo demanda. CARAPACE conserva unos 31,2 MB, por lo que su descarga depende de la conexión. Quedan las pruebas en dispositivos físicos y la publicación real. Historial en [AVANCE.md](AVANCE.md).
+Build y ESLint validados. El chunk 3D mantiene el aviso de tamaño de Vite; el JavaScript inicial está separado y los modelos se cargan bajo demanda. CARAPACE conserva unos 31,2 MB, por lo que su descarga depende de la conexión. Quedan las pruebas en dispositivos físicos. Historial en [AVANCE.md](AVANCE.md).

@@ -224,7 +224,16 @@ Los siguientes valores se calcularon antes y después del traslado y resultaron 
 
 - Segundo commit local autorizado: `docs: prepare atelier sneakers portfolio presentation`. Revisados únicamente `README.md`, `index.html`, este registro y `public/images/atelier-sneakers-social.png`. Se conservan las validaciones de build y ESLint de la etapa anterior: no cambiaron código, configuración ni recursos desde esas pruebas. Referencia local a la imagen correcta; URL públicas pendientes sin direcciones ficticias. Sin publicación, remoto ni push.
 
+## Despliegue exitoso y configuración pública del portafolio
+
+- 19-11-2026: despliegue en Vercel confirmado por el usuario, con Air Force 1, Sneaker Graffiti y CARAPACE 01 funcionando. Dominio definitivo: https://atelier-sneakers.vercel.app/. GitHub conectado; `main` estaba limpia y sincronizada con `origin/main` al iniciar esta etapa.
+- Comprobado el acceso público: página principal HTTP 200 con el título del showroom e imagen social HTTP 200 con tipo `image/png`.
+- `index.html`: enlace canónico y `og:url` con el dominio definitivo; `og:image` y `twitter:image` con la URL absoluta de `/images/atelier-sneakers-social.png`. Añadidos dimensiones 1200 × 630, tipo PNG y textos alternativos. Título y descripciones coherentes con las tres zapatillas.
+- Enlaces de Sketchfab y `skfb.ly` revisados en fuentes y documentación: sin parámetros de seguimiento; no fue necesario modificarlos. README actualizado con el proyecto público, el despliegue y la configuración social final.
+- `npm run build` y `npm run lint` completados correctamente. Persiste únicamente la advertencia conocida del chunk 3D mayor de 500 kB. Sin cambios de diseño, funcionalidad, GLB, Blender ni dependencias.
+- Cambios limitados a `index.html`, `README.md` y este registro, preparados para el commit autorizado `docs: finalize atelier sneakers production metadata` y `git push origin main`, sin force push. El resultado del commit, push y estado final de Git se informa al terminar la ejecución.
+
 ## Próxima etapa
 
-Cuando se defina el dominio de publicación, completar los metadatos con URL absolutas y comprobar la tarjeta social desde el sitio público. No crear remoto ni desplegar sin una nueva instrucción. Mantener las atribuciones; quedan las pruebas en dispositivos físicos y la decisión sobre recursos heredados sin uso.
+Configuración pública del portafolio completada. Mantener las atribuciones. Las pruebas en dispositivos físicos y la decisión sobre recursos heredados sin uso quedan fuera de esta etapa; no se inician tareas adicionales.
 
